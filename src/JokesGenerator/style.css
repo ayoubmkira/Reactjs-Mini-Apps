@@ -1,0 +1,39 @@
+
+body {
+    margin: 0;
+}
+.joke-section {
+    min-height: 100vh;
+    background-color: #fbb32e;
+    padding-top: 120px;
+}
+.joke-container {
+    max-width: 700px;
+    background-color: #15161a;
+    border-radius: 6px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    margin: 40px auto 0 auto;
+}
+.joke-container .joke-icon {
+    font-size: 80px;
+    margin: 0;
+}
+.joke-container .message {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, .3);
+    color: #FFF;
+    padding: 16px 10px;
+}
+.joke-container .joke {
+    color: #FFF;
+    font-size: 30px;
+}
+.joke-container .btn-generate-joke {
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}

@@ -1,11 +1,13 @@
 import Accordion from "./Accordion"
+import JokesGenerator from "./JokesGenerator"
 
 function App() {
 
   return (
-    <Accordion />
-
-    
+    <>
+      <Accordion />
+      <JokesGenerator />
+    </>
   )
 }
 

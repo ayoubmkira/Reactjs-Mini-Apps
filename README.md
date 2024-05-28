@@ -10,5 +10,8 @@ Currently, two official plugins are available:
 
 # Projects:
 
-## Accordion:
+## 1. Accordion:
 ![image](images/accordion.png)
+
+## 2. Joke Generator:
+![image](images/joke-generator.png)
