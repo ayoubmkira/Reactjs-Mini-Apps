@@ -15,3 +15,6 @@ Currently, two official plugins are available:
 
 ## 2. Joke Generator:
 ![image](images/joke-generator.png)
+
+## 3. Meal Generator:
+![image](images/meal-generator.png)
