@@ -1,6 +1,7 @@
 import Accordion from "./Accordion"
 import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
+import PasswordValidator from "./PasswordValidator"
 
 function App() {
 
@@ -8,8 +9,9 @@ function App() {
     <>
       {/* <Accordion /> */}
       {/* <JokesGenerator /> */}
+      {/* <MealsGenerator /> */}
 
-      <MealsGenerator />
+      <PasswordValidator />
     </>
   )
 }

@@ -1,0 +1,53 @@
+
+.password-validator-section {
+    min-height: 100vh;
+    background-color: #4285f4;
+    padding: 100px 30px;
+    box-sizing: border-box;
+}
+
+.password-validator-section .password-validator-container {
+    background-color: #FFF;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    border-radius: 10px;
+}
+
+.password-validator-section .input-password-container {
+    position: relative;
+}
+.password-validator-section .input-password-container .input-password {
+    font-size: 16px;
+    padding: 10px 35px 10px 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.password-validator-section .input-password-container .show-password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.password-validator-section .bottom {
+    margin: 30px 0 0 0;
+}
+.password-validator-section .list-validation-rules {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
+}
+.password-validator-section .validation-rule {
+    margin: 6px 0;
+    display: flex;
+    font-size: 15px;
+}
+.password-validator-section .validation-rule .icon {
+    font-size: 22px;
+}
+.password-validator-section .validation-rule .message {
+    padding-left: 8px;
+}

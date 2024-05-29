@@ -18,3 +18,6 @@ Currently, two official plugins are available:
 
 ## 3. Meal Generator:
 ![image](images/meal-generator.png)
+
+## 4. Password Validator:
+![image](images/password-validator.png)
