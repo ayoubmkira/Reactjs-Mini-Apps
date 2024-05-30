@@ -1,0 +1,111 @@
+
+.section__pomodoro {
+    background-color: #9980FA;
+    min-height: 100vh;
+    padding: 120px 30px;
+    box-sizing: border-box;
+}
+
+.section__pomodoro__title {
+    text-align: center;
+    color: #FFF;
+}
+
+.pomodoro {
+    background-color: #FFF;
+    max-width: 450px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+.pomodoro__lengths {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.pomodoro__controller {
+    width: 45%;
+}
+.pomodoro__controller__title {
+    font-size: 15px;
+}
+.pomodoro__controller__board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pomodoro__controller__board__btn {
+    border: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 25px;
+    font-size: 10px;
+    background-color: #1e90ff;
+    color: #FFF;
+}
+.pomodoro__controller__board__btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+.pomodoro__controller__board__length {
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.pomodoro__timer {
+    width: 80%;
+    margin: 60px auto 0 auto;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    overflow: hidden;
+}
+.pomodoro__timer__title,
+.pomodoro__timer__duration,
+.pomodoro__timer__buttons {
+    z-index: 2;
+    position: relative;
+}
+.pomodoro__timer__title {
+    margin: 0;
+}
+.pomodoro__timer__duration {
+    font-size: 70px;
+    margin: 20px 0;
+}
+
+.pomodoro__timer__buttons__btn {
+    color: #1e90ff;
+    cursor: pointer;
+    padding: 0;
+    background-color: #FFF;
+    font-size: 35px;
+    line-height: 35px;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.pomodoro__timer__buttons__btn svg {
+    display: block;
+}
+.pomodoro__timer__loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: #4bcffa;
+    z-index: 0;
+}

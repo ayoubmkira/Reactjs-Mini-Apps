@@ -21,3 +21,6 @@ Currently, two official plugins are available:
 
 ## 4. Password Validator:
 ![image](images/password-validator.png)
+
+## 5. Pomodoro:
+![image](images/pomodoro.png)
