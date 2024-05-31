@@ -3,6 +3,7 @@ import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
 import PasswordValidator from "./PasswordValidator"
 import Pomodoro from "./Pomodoro"
+import RockPaperScissors from "./RockPaperScissors"
 
 function App() {
 
@@ -12,8 +13,9 @@ function App() {
       {/* <JokesGenerator /> */}
       {/* <MealsGenerator /> */}
       {/* <PasswordValidator /> */}
+      {/* <Pomodoro /> */}
 
-      <Pomodoro />
+      <RockPaperScissors />
     </>
   )
 }

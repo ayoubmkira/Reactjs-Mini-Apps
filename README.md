@@ -24,3 +24,6 @@ Currently, two official plugins are available:
 
 ## 5. Pomodoro:
 ![image](images/pomodoro.png)
+
+## 6. Rock Paper Scissors:
+![image](images/rock-paper-scissors.png)
