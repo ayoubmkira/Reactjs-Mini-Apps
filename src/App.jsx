@@ -4,6 +4,7 @@ import MealsGenerator from "./MealsGenerator"
 import PasswordValidator from "./PasswordValidator"
 import Pomodoro from "./Pomodoro"
 import RockPaperScissors from "./RockPaperScissors"
+import ShoppingCart from "./ShoppingCart"
 
 function App() {
 
@@ -14,8 +15,9 @@ function App() {
       {/* <MealsGenerator /> */}
       {/* <PasswordValidator /> */}
       {/* <Pomodoro /> */}
+      {/* <RockPaperScissors /> */}
 
-      <RockPaperScissors />
+      <ShoppingCart />
     </>
   )
 }
