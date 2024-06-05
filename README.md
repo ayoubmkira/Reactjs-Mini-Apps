@@ -27,3 +27,6 @@ Currently, two official plugins are available:
 
 ## 6. Rock Paper Scissors:
 ![image](images/rock-paper-scissors.png)
+
+## 7. Shopping Cart:
+![image](images/shopping-cart.png)
