@@ -33,3 +33,6 @@ Currently, two official plugins are available:
 
 ## 8. Color Slider:
 ![image](images/color-slider.png)
+
+## 9. Number Guessing:
+![image](images/number-guessing.png)

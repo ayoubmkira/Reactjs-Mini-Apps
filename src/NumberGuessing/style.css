@@ -1,0 +1,42 @@
+
+
+.section-number-guessing {
+    min-height: 100vh;
+    padding: 100px 30px;
+    background-color: #8E44AD;
+}
+.section-number-guessing__title {
+    color: #FFF;
+    font-size: 40px;
+    text-align: center;
+}
+.section-number-guessing__container {
+    max-width: 600px;
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 40px 25px;
+    margin: auto;
+    text-align: center;
+}
+
+.section-number-guessing__message {
+    margin-bottom: 40px;
+}
+
+.section-number-guessing__input {
+    font-size: 24px;
+    padding: 8px 10px;
+    text-align: center;
+}
+.section-number-guessing__btn {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8E44AD;
+    color: #FFF;
+    border-radius: 6px;
+    border: none;
+}
+.section-number-guessing__btn--reset {
+    margin-top: 30px;
+}
