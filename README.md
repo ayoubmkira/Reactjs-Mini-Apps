@@ -30,3 +30,6 @@ Currently, two official plugins are available:
 
 ## 7. Shopping Cart:
 ![image](images/shopping-cart.png)
+
+## 8. Color Slider:
+![image](images/color-slider.png)

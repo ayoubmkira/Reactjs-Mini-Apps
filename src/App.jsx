@@ -1,4 +1,5 @@
 import Accordion from "./Accordion"
+import ColorSlider from "./ColorSlider"
 import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
 import PasswordValidator from "./PasswordValidator"
@@ -16,8 +17,9 @@ function App() {
       {/* <PasswordValidator /> */}
       {/* <Pomodoro /> */}
       {/* <RockPaperScissors /> */}
+      {/* <ShoppingCart /> */}
 
-      <ShoppingCart />
+      <ColorSlider />
     </>
   )
 }
