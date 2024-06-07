@@ -39,3 +39,6 @@ Currently, two official plugins are available:
 
 ## 10. Recursive Navigation Menu:
 ![image](images/navigation-menu.png)
+
+## 11. Slider:
+![image](images/slider.png)

@@ -8,6 +8,7 @@ import Pomodoro from "./Pomodoro"
 import RecursiveNavigationMenu from "./RecursiveNavigationMenu"
 import RockPaperScissors from "./RockPaperScissors"
 import ShoppingCart from "./ShoppingCart"
+import Slider from "./Slider"
 
 function App() {
 
@@ -22,8 +23,9 @@ function App() {
       {/* <ShoppingCart /> */}
       {/* <ColorSlider /> */}
       {/* <NumberGuessing /> */}
+      {/* <RecursiveNavigationMenu /> */}
 
-      <RecursiveNavigationMenu />
+      <Slider />
     </>
   )
 }
