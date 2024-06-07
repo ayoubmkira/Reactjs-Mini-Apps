@@ -36,3 +36,6 @@ Currently, two official plugins are available:
 
 ## 9. Number Guessing:
 ![image](images/number-guessing.png)
+
+## 10. Recursive Navigation Menu:
+![image](images/navigation-menu.png)

@@ -5,6 +5,7 @@ import MealsGenerator from "./MealsGenerator"
 import NumberGuessing from "./NumberGuessing"
 import PasswordValidator from "./PasswordValidator"
 import Pomodoro from "./Pomodoro"
+import RecursiveNavigationMenu from "./RecursiveNavigationMenu"
 import RockPaperScissors from "./RockPaperScissors"
 import ShoppingCart from "./ShoppingCart"
 
@@ -20,8 +21,9 @@ function App() {
       {/* <RockPaperScissors /> */}
       {/* <ShoppingCart /> */}
       {/* <ColorSlider /> */}
+      {/* <NumberGuessing /> */}
 
-      <NumberGuessing />
+      <RecursiveNavigationMenu />
     </>
   )
 }
