@@ -42,3 +42,6 @@ Currently, two official plugins are available:
 
 ## 11. Slider:
 ![image](images/slider.png)
+
+## 12. Slider:
+![image](images/tic-tac-toe.png)

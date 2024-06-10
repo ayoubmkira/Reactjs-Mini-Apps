@@ -9,6 +9,7 @@ import RecursiveNavigationMenu from "./RecursiveNavigationMenu"
 import RockPaperScissors from "./RockPaperScissors"
 import ShoppingCart from "./ShoppingCart"
 import Slider from "./Slider"
+import TicTacToe from "./TicTacToe"
 
 function App() {
 
@@ -24,8 +25,9 @@ function App() {
       {/* <ColorSlider /> */}
       {/* <NumberGuessing /> */}
       {/* <RecursiveNavigationMenu /> */}
+      {/* <Slider /> */}
 
-      <Slider />
+      <TicTacToe />
     </>
   )
 }
