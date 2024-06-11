@@ -10,6 +10,7 @@ Currently, two official plugins are available:
 
 # Projects:
 
+
 ## 1. Accordion:
 ![image](images/accordion.png)
 
@@ -43,5 +44,5 @@ Currently, two official plugins are available:
 ## 11. Slider:
 ![image](images/slider.png)
 
-## 12. Slider:
+## 12. Tic Tac Toe:
 ![image](images/tic-tac-toe.png)
