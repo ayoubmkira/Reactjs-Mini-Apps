@@ -1,0 +1,54 @@
+
+.section-from-validation {
+    min-height: 100vh;
+    padding: 100px 30px;
+    background-color: #36D1DC;
+}
+.section-from-validation__title {
+    text-align: center;
+    font-size: 35px;
+}
+
+.section-from-validation__form {
+    background-color: #FFF;
+    width: 90%;
+    max-width: 350px;
+    margin: 50px auto 0 auto;
+    padding: 50px 30px;
+    border-radius: 10px;
+    font-family: "Lato", sans-serif;
+}
+.form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form-control .label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.form-control .input {
+    font-size: 16px;
+    padding: 10px 12px;
+    border: none;
+    background-color: #ECF0F1;
+    outline: none;
+}
+.form-control .error {
+    color: #F00;
+    font-size: 11px;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+
+.btn__form {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: #36D1DC;
+    color: #FFF;
+    cursor: pointer;
+}

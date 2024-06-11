@@ -1,5 +1,6 @@
 import Accordion from "./Accordion"
 import ColorSlider from "./ColorSlider"
+import FormValidation from "./FormValidation"
 import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
 import NumberGuessing from "./NumberGuessing"
@@ -26,8 +27,9 @@ function App() {
       {/* <NumberGuessing /> */}
       {/* <RecursiveNavigationMenu /> */}
       {/* <Slider /> */}
+      {/* <TicTacToe /> */}
 
-      <TicTacToe />
+      <FormValidation />
     </>
   )
 }
