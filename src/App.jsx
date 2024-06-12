@@ -1,5 +1,6 @@
 import Accordion from "./Accordion"
 import ColorSlider from "./ColorSlider"
+import EventReminder from "./EventReminder"
 import FormValidation from "./FormValidation"
 import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
@@ -28,8 +29,9 @@ function App() {
       {/* <RecursiveNavigationMenu /> */}
       {/* <Slider /> */}
       {/* <TicTacToe /> */}
+      {/* <FormValidation /> */}
 
-      <FormValidation />
+      <EventReminder />
     </>
   )
 }

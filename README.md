@@ -49,3 +49,6 @@ Currently, two official plugins are available:
 
 ## 13. Form Validation:
 ![image](images/form-validation.png)
+
+## 14. Event Reminder:
+![image](images/event-reminder.png)

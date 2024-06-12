@@ -1,0 +1,139 @@
+
+.section-event-reminder {
+    min-height: 100vh;
+    padding: 100px 30px;
+    background-color: #f1f1f1;
+}
+.section-event-reminder__container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.event-form {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+.event-form__time-input,
+.event-form__title-input,
+.event-form__add-button {
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+}
+.event-form__time-input {
+
+}
+.event-form__title-input {
+
+}
+.event-form__add-button {
+    font-weight: bold;
+    background-color: #488dff;
+    color: #FFF;
+    cursor: pointer;
+}
+
+
+
+/* Event Card */
+.event-card {
+    position: relative;
+    margin: 100px 50px 0;
+}
+.event-card-done {
+    animation: animate .7s linear infinite alternate;
+}
+.event-card-done .event-card__time__header {
+    color: #F00;
+}
+.event-card-done .event-card__title {
+    text-decoration: line-through;
+}
+.event-card__btn__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: #FFF;
+    color: red;
+    font-size: 25px;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.event-card__title {
+    background: #74b2af;
+    margin: 0;
+    margin-bottom: 15px;
+    color: #000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    top: 0;
+    width: 90%;
+    padding: 15px 10px 20px 20px;
+    z-index: 2;
+    font-size: 25px;
+    border-radius: 10px 10px 0 0;
+    color: #FFF;
+}
+.event-card__time {
+    background: linear-gradient(to right bottom, #6990af,#74b2af);
+    color: #FFF;
+    border-radius: 10px;
+    padding: 30px 15px;
+    position: relative;
+    z-index: 3;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
+
+/* Card Time Header */
+.event-card__time__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+.event-card__time__column__value {
+    font-size: 85px;
+    margin: 0;
+}
+.event-card__time__column__text {
+    margin: 0;
+    font-size: 14px;
+}
+.event-card__time__dots {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+/* Card Time Footer */
+.event-card__time__footer {
+    margin-top: 30px;
+    text-align: center;
+}
+.event-card__time__footer .icon {
+    font-size: 18px;
+    color: #222;
+}
+.event-card__time__footer .text {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes animate {
+    to {
+        transform: scale(.97);
+    }
+}
