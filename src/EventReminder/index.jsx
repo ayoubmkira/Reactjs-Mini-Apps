@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { v4 as uuidv4} from "uuid";
 import { FaCalendarDay, FaTimes } from "react-icons/fa";
+import { useLocalStorage } from "react-use-storage";
 import "./style.css";
 
 const calculateDifference = (date) => {
@@ -12,10 +13,11 @@ const addZero = (value) => {
 
 export default function EventReminder() {
 
+    const [value, setValue] = useLocalStorage("events-reminder", []);
     const [forceUpdateKey, setForceUpdateKey] = useState(0);
     const [eventTitle, setEventTitle] = useState("");
     const [dateTime, setDateTime] = useState(new Date());
-    const [listEvents, setListEvents] = useState([]);
+    const [listEvents, setListEvents] = useState(value);
 
     const handleAddDate = () => {
         let difference = calculateDifference(dateTime);
@@ -70,6 +72,10 @@ export default function EventReminder() {
 
         return () => clearTimeout(timer);
     }, [forceUpdateKey]);
+
+    useEffect(() => {
+        setValue(listEvents);
+    }, [listEvents]);
 
     return <section className="section-event-reminder">
         <div className="section-event-reminder__container">
