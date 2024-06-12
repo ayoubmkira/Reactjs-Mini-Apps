@@ -18,6 +18,7 @@ export default function EventReminder() {
     const [eventTitle, setEventTitle] = useState("");
     const [dateTime, setDateTime] = useState(new Date());
     const [listEvents, setListEvents] = useState(value);
+    const [hideDoneEvents, setHideDoneEvents] = useState(true);
 
     const handleAddDate = () => {
         let difference = calculateDifference(dateTime);
@@ -77,6 +78,8 @@ export default function EventReminder() {
         setValue(listEvents);
     }, [listEvents]);
 
+    let filteredArray = (hideDoneEvents)? listEvents.filter(event => !event.done): listEvents;
+
     return <section className="section-event-reminder">
         <div className="section-event-reminder__container">
             <div className="event-form">
@@ -95,9 +98,18 @@ export default function EventReminder() {
                     className="event-form__add-button"
                     onClick={handleAddDate}>Add Event</button>
             </div>
+            <div className="event-show-hide">
+                <input
+                    id="hide-done-events"
+                    type="checkbox"
+                    checked={hideDoneEvents}
+                    onChange={() => setHideDoneEvents(!hideDoneEvents)} />
+                <label htmlFor="hide-done-events">Hide done Events.</label>
+            </div>
+
             <div className="list-events">
                 {
-                    listEvents.map((event, i) => {
+                    filteredArray.map((event, i) => {
                         const dateResult = event.done? { days: "00", hours: "00", minutes: "00", seconds: "00" }: calculateTimeToEvent(event);
                         
                         return <div key={i} className={`event-card event-card${event.done? "-done": ""}`}>

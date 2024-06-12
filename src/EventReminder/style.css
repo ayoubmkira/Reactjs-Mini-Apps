@@ -13,7 +13,6 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    /* flex-direction: column; */
     gap: 8px;
 }
 .event-form__time-input,
@@ -35,6 +34,11 @@
     background-color: #488dff;
     color: #FFF;
     cursor: pointer;
+}
+
+.event-show-hide {
+    text-align: center;
+    margin-top: 15px;
 }
 
 
