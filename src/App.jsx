@@ -4,6 +4,7 @@ import EventReminder from "./EventReminder"
 import FormValidation from "./FormValidation"
 import JokesGenerator from "./JokesGenerator"
 import MealsGenerator from "./MealsGenerator"
+import MultiStepForm from "./MultiStepForm"
 import NumberGuessing from "./NumberGuessing"
 import PasswordValidator from "./PasswordValidator"
 import Pomodoro from "./Pomodoro"
@@ -30,8 +31,9 @@ function App() {
       {/* <Slider /> */}
       {/* <TicTacToe /> */}
       {/* <FormValidation /> */}
+      {/* <EventReminder /> */}
 
-      <EventReminder />
+      <MultiStepForm />
     </>
   )
 }

@@ -1,0 +1,117 @@
+
+:root {
+    --second-color: #0077ff;
+}
+.section-mutistep-form {
+    background-color: var(--second-color);
+    min-height: 100vh;
+    padding: 15% 30px;
+}
+.form__container {
+    background-color: #FFF;
+    padding: 50px 30px;
+    max-width: 450px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+/* Form Steps */
+.list__steps {
+    list-style: none;
+    padding: 0;
+    width: 80%;
+    max-width: 310px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+}
+.list__steps:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 3px;
+    z-index: 1;
+    width: 100%;
+    background-color: lightgrey;
+}
+.list__steps__item {
+    background-color: lightgrey;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
+}
+.list__steps__item.in {
+    background-color:var(--second-color);
+    color: #FFF;
+}
+
+.form__block__header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Form Control */
+.form-control label {
+    color: grey;
+    margin-bottom: 6px;
+    font-size: 13.5px;
+}
+.form-control input {
+    color: grey;
+    font-size: 14.5px;
+    padding: 8px 6px;
+    border: 1px solid grey;
+    color: #333;
+}
+.error-message {
+    margin: 0;
+    font-size: 10.5px;
+    color: #F00;
+    margin-top: 3px;
+    letter-spacing: .5px;
+}
+
+/* Steps Control */
+.steps__control {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.btn__step {
+    padding: 6px 14px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn__step--back {
+    color: #333;
+}
+.btn__step--next {
+    color: #FFF;
+    background-color: var(--second-color);
+}
+
+/* Final Message */
+.final-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.final-message__icon {
+    color: var(--second-color);
+    font-size: 60px;
+}
+.final-message__text {
+    font-size: 24px;
+    margin-left: 8px;
+}
+

@@ -52,3 +52,6 @@ Currently, two official plugins are available:
 
 ## 14. Event Reminder:
 ![image](images/event-reminder.png)
+
+## 15. Multi Step Form:
+![image](images/multi-step-form.png)
