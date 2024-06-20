@@ -2,8 +2,8 @@ import { useState } from "react";
 import SignupInfo from "./SignupInfo";
 import PersonalInfo from "./PersonalInfo";
 import ProfessionalInfo from "./ProfessionalInfo";
-import "./style.css";
 import { FaCheckCircle } from "react-icons/fa";
+import "./style.css";
 
 export default function MultiStepForm() {
 
@@ -29,28 +29,11 @@ export default function MultiStepForm() {
     /* State for input name and a message error if exists. */
     const [inputsErrors, setInputsErrors] = useState({});
 
-
-    /* Functions to control inputs change inside Every Form, and validate input */
-    const handleSignupChange = (e) => {
+    /* Function to control inputs change inside Every Form, and validate input */
+    const handleInputChange = (e, setInputs) => {
         const name = e.target.name;
         const value = e.target.value;
-        setSignupInfoInputs((currInputs) => {
-            return { ...currInputs, [name]: value };
-        });
-        validateInput(name, value);
-    };
-    const handlePersonalInfoChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setPersonalInfoInputs((currInputs) => {
-            return { ...currInputs, [name]: value };
-        });
-        validateInput(name, value);
-    };
-    const handleProfessionalInfoChange = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        setProfessionalInfoInputs((currInputs) => {
+        setInputs((currInputs) => {
             return { ...currInputs, [name]: value };
         });
         validateInput(name, value);
@@ -221,17 +204,17 @@ export default function MultiStepForm() {
                                     (currentStep === 1) ?
                                         <SignupInfo
                                             signupInfoInputs={signupInfoInputs}
-                                            onChange={handleSignupChange}
+                                            onChange={(e) => handleInputChange(e, setSignupInfoInputs)}
                                             signupInputsErrors={inputsErrors} /> :
                                         (currentStep === 2) ?
                                             <PersonalInfo
                                                 personalInfoInputs={personalInfoInputs}
-                                                onChange={handlePersonalInfoChange}
+                                                onChange={(e) => handleInputChange(e, setPersonalInfoInputs)}
                                                 personalInfoInputsErrors={inputsErrors} /> :
                                             (currentStep === 3) ?
                                                 <ProfessionalInfo
                                                     professionalInfoInputs={professionalInfoInputs}
-                                                    onChange={handleProfessionalInfoChange}
+                                                    onChange={(e) => handleInputChange(e, setProfessionalInfoInputs)}
                                                     professionalInfoInputsErrors={inputsErrors} /> : null
                                 }
                             </form>
