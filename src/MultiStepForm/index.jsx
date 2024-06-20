@@ -191,12 +191,15 @@ export default function MultiStepForm() {
                     (currentStep <= STEPS) ?
                         <>
                             <div className="form__steps">
-                                <ul className="list__steps" data-steps={STEPS} data-current-step={currentStep}>
+                                <ul className="list__steps">
                                     {
                                         [...new Array(STEPS)].map((_, i) => {
                                             return <li className={`list__steps__item ${((i + 1) <= currentStep) ? "in" : ""}`} key={i}>{i + 1}</li>
                                         })
                                     }
+                                    <div className="list__steps__progress">
+                                        <div className="list__steps__progress__bar" style={{width: (((currentStep - 1) * 100) / (STEPS - 1)) + "%"}}></div>
+                                    </div>
                                 </ul>
                             </div>
                             <form>

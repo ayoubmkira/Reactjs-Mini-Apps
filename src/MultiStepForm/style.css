@@ -27,16 +27,22 @@
     position: relative;
     margin-bottom: 40px;
 }
-.list__steps:before {
-    content: "";
+.list__steps__progress,
+.list__steps__progress__bar {
+}
+.list__steps__progress {
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
     height: 3px;
     z-index: 1;
+    transform: translateY(-50%);
     width: 100%;
     background-color: lightgrey;
+}
+.list__steps__progress__bar {
+    height: 3px;
+    background-color: var(--second-color)
 }
 .list__steps__item {
     background-color: lightgrey;
