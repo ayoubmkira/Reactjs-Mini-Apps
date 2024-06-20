@@ -81,42 +81,29 @@ export default function MultiStepForm() {
         return message;
     };
 
-
+    // Check Inputs For Current Step:
     const validateCurrentStep = () => {
         let isValid = true;
         const errors = {}; // To store errors for each input
+        let inputsToValidate = {};
 
-        if (currentStep === 1) {
-            // Validate signup inputs:
-            Object.keys(signupInfoInputs).forEach((key) => {
-                const value = signupInfoInputs[key];
-                const message = validateInput(key, value); // Call validateInput function
-                if (message) {
-                    errors[key] = message;
-                    isValid = false;
-                }
-            });
-        } else if (currentStep === 2) {
-            // Validate personalInfo inputs:
-            Object.keys(personalInfoInputs).forEach((key) => {
-                const value = personalInfoInputs[key];
-                const message = validateInput(key, value); // Call validateInput function
-                if (message) {
-                    errors[key] = message;
-                    isValid = false;
-                }
-            });
-        } else if (currentStep === 3) {
-            // Validate professionalInfo inputs:
-            Object.keys(professionalInfoInputs).forEach((key) => {
-                const value = professionalInfoInputs[key];
-                const message = validateInput(key, value); // Call validateInput function
-                if (message) {
-                    errors[key] = message;
-                    isValid = false;
-                }
-            });
+        // Determine which inputs to validate based on currentStep
+        switch (currentStep) {
+            case 1: inputsToValidate = signupInfoInputs; break;
+            case 2: inputsToValidate = personalInfoInputs; break;
+            case 3: inputsToValidate = professionalInfoInputs; break;
+            default: break;
         }
+
+        // Validate inputs
+        Object.keys(inputsToValidate).forEach((key) => {
+            const value = inputsToValidate[key];
+            const message = validateInput(key, value); // Call validateInput function
+            if (message) {
+                errors[key] = message;
+                isValid = false;
+            }
+        });
 
         setInputsErrors(errors); // Update errors state
         return isValid;
@@ -145,7 +132,6 @@ export default function MultiStepForm() {
 
     return <section className="section-mutistep-form">
         <div className="section-mutistep-form__container">
-
             <div className="form__container">
                 {
                     (currentStep <= STEPS) ?
