@@ -22,7 +22,7 @@ export default function MultiStepForm() {
     const [professionalInfoInputs, setProfessionalInfoInputs] = useState({
         currentCompany: "",
         totalExperience: "",
-        designiation: ""
+        designation: ""
     });
     /* State for specifying the current State. */
     const [currentStep, setCurrentStep] = useState(1);
@@ -41,86 +41,46 @@ export default function MultiStepForm() {
 
     /* Function to validate each input, and put it inside. */
     const validateInput = (name, value) => {
-        let message = "";
+        const trimValue = value.trim();
 
-        // Check Signup Inputs:
-        if (name === "email") {
-            if (!value.trim()) {
-                message = "Email should not be Empty!";
-            } else if (!/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(value)) {
-                message = "Email is not valid!";
-            }
-        }
-        if (name === "password") {
-            if (!value.trim()) {
-                message = "Password should not be Empty!";
-            } else if (value.length < 8) {
-                message = "Password Length should be more than 7 characters!";
-            }
-        }
-        if (name === "confirmPassword") {
-            if (!value.trim()) {
-                message = "Password confirmation should not be Empty!";
-            } else if (value.length < 8) {
-                message = "Password confirmation Length should be more than 7 characters!";
-            } else if (value !== signupInfoInputs.password) {
-                message = "Passwords should be the Same!";
-            }
-        }
+        const commonLengthValidation = (value, minLength, fieldName) =>
+            !value ? `${fieldName} should not be Empty!` :
+                value.length < minLength ? `${fieldName} Length should be more than ${minLength - 1} characters!` :
+                    "";
 
-        // Check Personal Info:
-        if (name === "username") {
-            if (!value.trim()) {
-                message = "Username should not be Empty!";
-            } else if (value.length < 3) {
-                message = "Username Length should be more than 2 characters!";
-            }
-        }
-        if (name === "firstName") {
-            if (!value.trim()) {
-                message = "First name should not be Empty!";
-            } else if (value.length < 3) {
-                message = "First name Length should be more than 2 characters!";
-            }
-        }
-        if (name === "lastName") {
-            if (!value.trim()) {
-                message = "Last name should not be Empty!";
-            } else if (value.length < 3) {
-                message = "Last name Length should be more than 2 characters!";
-            }
-        }
+        const validations = {
+            email: () =>
+                !trimValue ? "Email should not be Empty!" :
+                    !/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/.test(trimValue) ? "Email is not valid!" :
+                        "",
+            password: () =>
+                !trimValue ? "Password should not be Empty!" :
+                    trimValue.length < 8 ? "Password Length should be more than 7 characters!" :
+                        "",
+            confirmPassword: () =>
+                !trimValue ? "Password confirmation should not be Empty!" :
+                    trimValue.length < 8 ? "Password confirmation Length should be more than 7 characters!" :
+                        trimValue !== signupInfoInputs.password ? "Passwords should be the Same!" :
+                            "",
+            username: () => commonLengthValidation(trimValue, 3, "Username"),
+            firstName: () => commonLengthValidation(trimValue, 3, "First name"),
+            lastName: () => commonLengthValidation(trimValue, 3, "Last name"),
+            currentCompany: () => commonLengthValidation(trimValue, 3, "Company"),
+            totalExperience: () => {
+                const newValue = +trimValue;
+                return isNaN(newValue) ? "Total Experience should be a number!" :
+                    newValue < 1 || newValue >= 50 ? "Total Experience should be between 1 and 50!" :
+                        "";
+            },
+            designation: () => commonLengthValidation(trimValue, 3, "Designation")
+        };
 
-        // Check Professional Infos:
-        if (name === "currentCompany") {
-            if (!value.trim()) {
-                message = "Company should not be Empty!";
-            } else if (value.length < 3) {
-                message = "Company Length should be more than 2 characters!";
-            }
-        }
-        if (name === "totalExperience") {
-            const newValue = +value.trim();
-            if (isNaN(newValue)) {
-                message = "Total Experience should be a number!";
-            } else if (newValue < 1 || newValue >= 50) {
-                message = "Total Experience should be between 1 and 50!";
-            }
-        }
-        if (name === "designiation") {
-            if (!value.trim()) {
-                message = "Designiation should not be Empty!";
-            } else if (value.length < 3) {
-                message = "Designiation Length should be more than 2 characters!";
-            }
-        }
-
-        setInputsErrors(currErrors => {
-            return { ...currErrors, [name]: message };
-        });
+        const message = validations[name] ? validations[name]() : "";
+        setInputsErrors(currErrors => ({ ...currErrors, [name]: message }));
 
         return message;
     };
+
 
     const validateCurrentStep = () => {
         let isValid = true;
@@ -198,7 +158,7 @@ export default function MultiStepForm() {
                                         })
                                     }
                                     <div className="list__steps__progress">
-                                        <div className="list__steps__progress__bar" style={{width: (((currentStep - 1) * 100) / (STEPS - 1)) + "%"}}></div>
+                                        <div className="list__steps__progress__bar" style={{ width: (((currentStep - 1) * 100) / (STEPS - 1)) + "%" }}></div>
                                     </div>
                                 </ul>
                             </div>
@@ -225,18 +185,18 @@ export default function MultiStepForm() {
                                 <div>
                                     {
                                         (currentStep !== 1) &&
-                                            <button onClick={handleMoveBackStep} className="btn__step btn__step--back">Back</button>
+                                        <button onClick={handleMoveBackStep} className="btn__step btn__step--back">Back</button>
                                     }
                                 </div>
                                 <div>
                                     {
                                         (currentStep !== STEPS) ?
-                                            <button onClick={handleMoveNextStep} className="btn__step btn__step--next">Next</button>:
+                                            <button onClick={handleMoveNextStep} className="btn__step btn__step--next">Next</button> :
                                             <button onClick={handleSubmitForm} className="btn__step btn__step--next">Submit</button>
-                                    }      
+                                    }
                                 </div>
                             </div>
-                        </>: <div className="final-message">
+                        </> : <div className="final-message">
                             <FaCheckCircle className="final-message__icon" />
                             <p className="final-message__text">Form is Submitted.</p>
                         </div>

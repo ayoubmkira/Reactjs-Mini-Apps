@@ -31,11 +31,11 @@ export default function professionalInfo({ professionalInfoInputs, onChange, pro
                 id={"designation"}
                 label={"Designation"}
                 type={"text"}
-                name={"designiation"}
-                placeholder={"Designiation"}
-                value={professionalInfoInputs.designiation || ""}
+                name={"designation"}
+                placeholder={"Designation"}
+                value={professionalInfoInputs.designation || ""}
                 onChange={onChange}
-                error={professionalInfoInputsErrors.designiation}
+                error={professionalInfoInputsErrors.designation}
                  />
         </div>
     </div>;
